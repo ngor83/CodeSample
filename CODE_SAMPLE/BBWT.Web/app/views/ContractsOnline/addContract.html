@@ -1,0 +1,129 @@
+﻿<div class="page-header">
+    <h1 translate> {{Header}} Contract</h1>
+</div>
+
+<div permission="everybody">
+    <form class="form-horizontal">
+        <div class="form-group">
+            <label class="col-sm-3 control-label">Contract Name:</label>
+            <div class="label-content col-sm-4">
+                <input type="text" class="form-control" ng-model="Contract.ContractName" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-3 control-label">Contract Number:</label>
+            <div class="label-content col-sm-4">
+                <input type="text" class="form-control" ng-model="Contract.ContractNumber" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-3 control-label">Status:</label>
+            <div class="label-content col-sm-4">
+                <select ng-model="Contract.StatusId" class="form-control" kendo-drop-down-list k-data-source="StatusesDS" k-options="statusesOption" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-3 control-label">Contract Start Date:</label>
+            <div class="label-content col-sm-4">
+                <input kendo-date-picker format="'dd/MM/yyyy'" onkeydown="return false;" class="form-control" k-ng-model="Contract.StartDate" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-3 control-label">Principal Contractor:</label>
+            <div class="label-content col-sm-4">
+                <input type="text" class="form-control" ng-model="Contract.PrincipalContractor" />
+            </div>
+        </div>
+        <h2 class="sectionHeader">Site Address</h2>
+        <div class="form-group">
+            <label class="col-sm-3 control-label">Address Line 1:</label>
+            <div class="label-content col-sm-4">
+                <input type="text" class="form-control" ng-model="Contract.AddressLine1" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-3 control-label">Address Line 2:</label>
+            <div class="label-content col-sm-4">
+                <input type="text" class="form-control" ng-model="Contract.AddressLine2" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-3 control-label">Town / City:</label>
+            <div class="label-content col-sm-4">
+                <input type="text" class="form-control" ng-model="Contract.TownCity" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-3 control-label">Country:</label>
+            <div class="label-content col-sm-4">
+                <input type="text" class="form-control" ng-model="Contract.Country" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-3 control-label">Post Code:</label>
+            <div class="label-content col-sm-4">
+                <input type="text" class="form-control" ng-model="Contract.PostCode" />
+            </div>
+        </div>
+        <h2 class="sectionHeader">HSQE</h2>
+        <div class="form-group">
+            <label class="col-sm-3 control-label">NCR Manager:</label>
+            <div class="label-content col-sm-4">
+                <select id="engineers" style="width: 100%;" k-data-text-field="'Name'" k-data-value-field="'Id'" k-data-source="UserDS" kendo-drop-down-list ng-model="Contract.NCRManagerId"  k-option-label="' '" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-3 control-label">Email For Major NCR:</label>
+            <div class="label-content col-sm-4">
+                <input type="text" class="form-control" ng-model="Contract.EmailForMajorNCR" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-3 control-label">Email For Minor NCR:</label>
+            <div class="label-content col-sm-4">
+                <input type="text" class="form-control" ng-model="Contract.EmailForMinorNCR" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-3 control-label">Contract Actions Assigned to:</label>
+            <div class="label-content col-sm-4">
+                <select id="engineers" style="width: 100%;" k-data-text-field="'Name'" k-data-value-field="'Id'" k-data-source="UserDS" kendo-drop-down-list ng-model="Contract.InspectionsManagerId"  k-option-label="' '" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-3 control-label">Frequency of inspections, Every:</label>
+            <div class="label-content col-sm-4">
+                <input type="number" class="form-control" ng-model="Contract.FrequencyOfInspectionsEvery" />
+            </div>
+            <div class=" col-xs-2 col-sm-2">
+                <span>Days</span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-3 control-label">Missed Inspection Escalate After:</label>
+            <div class="label-content col-sm-4">
+                <input type="number" class="form-control" ng-model="Contract.MissedInspectionEscalateAfter" />
+            </div>
+            <div class=" col-xs-2 col-sm-2">
+                <span>Days</span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-3 control-label">Audit Manager:</label>
+            <div class="label-content col-sm-4">
+                <select id="engineers" style="width: 100%;" k-data-text-field="'Name'" k-data-value-field="'Id'" k-data-source="UserDS" kendo-drop-down-list ng-model="Contract.AuditManagerId"  k-option-label="' '" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-sm-3 control-label">Risk Manager:</label>
+            <div class="label-content col-sm-4">
+                <select id="engineers" style="width: 100%;" k-data-text-field="'Name'" k-data-value-field="'Id'" k-data-source="UserDS" kendo-drop-down-list ng-model="Contract.RiskManagerId"  k-option-label="' '" />
+            </div>
+        </div>
+        <br />
+        <div>
+            <button type="button" class="k-button col-xs-row btn-pad-right" ng-click="Back()"><span>Back</span></button>
+            <button type="button" class="k-button col-xs-row" ng-click="Save()"><span>Save</span></button>
+        </div>
+    </form>
+</div>

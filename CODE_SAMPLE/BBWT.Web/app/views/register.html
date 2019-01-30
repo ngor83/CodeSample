@@ -1,0 +1,87 @@
+﻿<div>
+    <div class="page-header">
+        <h1 translate>PAGES.REGISTER.TITLE</h1>
+    </div>
+    <p translate translate-values="{min: 6}">PAGES.REGISTER.DESCRIPTION</p>
+    <div id="errors" class="alert alert-danger hidden">
+        <!-- Placeholder to show validation summary-->
+    </div>
+    <div class="alert alert-danger" ng-show="RegisterCtrl.ErrorMessage">{{RegisterCtrl.ErrorMessage}}</div>
+    <div>
+        <form name="form" class="form-horizontal" novalidate="" autocomplete="off">
+            <div class="form-group">
+                <label for="name" class="control-label col-sm-3 col-xs-10" translate>PAGES.REGISTER.USERNAME.TITLE</label>
+                <div class="label-content col-sm-4 col-xs-10">
+                    <input id="name" name="name" autocomplete="off" class="form-control" type="email"
+                           ng-model="data.name" required validationmessage="{{'PAGES.REGISTER.USERNAME.REQUIRED' | translate}}"
+                           placeholder="{{'PAGES.REGISTER.USERNAME.PLACEHOLDER' | translate}}"
+                           data-email-msg="{{'PAGES.REGISTER.USERNAME.INVALID' | translate}}" />
+                </div>
+                <div class="col-sm-4 col-xs-10">
+                    <div class="k-invalid-msg" data-for="name"></div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="firstName" class="control-label col-sm-3 col-xs-10" translate>PAGES.REGISTER.FIRSTNAME.TITLE</label>
+                <div class="label-content col-sm-4 col-xs-10">
+                    <input id="firstName" name="firstName" autocomplete="off" class="form-control" type="text"
+                           ng-model="data.firstName" validationmessage="{{'PAGES.REGISTER.FIRSTNAME.INVALID' | translate: '{min: 0, max: 8000}'}}"
+                           placeholder="{{'PAGES.REGISTER.FIRSTNAME.PLACEHOLDER' | translate}}" pattern="{{'PAGES.REGISTER.FIRSTNAME.PATTERN' | translate: '{min: 0, max: 8000}'}}" />
+                </div>
+                <div class="col-sm-4 col-xs-10">
+                    <div class="k-invalid-msg" data-for="firstName"></div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="surname" class="control-label col-sm-3 col-xs-10" translate>PAGES.REGISTER.SURNAME.TITLE</label>
+                <div class="label-content col-sm-4 col-xs-10">
+                    <input name="surname" autocomplete="off" class="form-control" type="text"
+                           ng-model="data.surname" validationmessage="{{'PAGES.REGISTER.SURNAME.INVALID' | translate: '{min: 0, max: 8000}'}}"
+                           placeholder="{{'PAGES.REGISTER.SURNAME.PLACEHOLDER' | translate}}" pattern="{{'PAGES.REGISTER.SURNAME.PATTERN' | translate: '{min: 0, max: 8000}'}}" />
+                </div>
+                <div class="col-sm-4 col-xs-10">
+                    <div class="k-invalid-msg" data-for="surname"></div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="pass" class="control-label col-sm-3 col-xs-10" translate>PAGES.REGISTER.PASSWORD.TITLE</label>
+                <div class="label-content col-sm-4 col-xs-10">
+                    <input id="pass" name="pass" autocomplete="off" class="form-control" type="password"
+                        ng-model="data.pass"
+                        placeholder="{{'PAGES.REGISTER.PASSWORD.PLACEHOLDER' | translate}}"
+                        required
+                        validationmessage="{{'PAGES.REGISTER.PASSWORD.REQUIRED' | translate}}"
+                        pass-meter="#passMeterContainer" />
+                </div>
+                <div class="col-xs-10 col-sm-4">
+                    <div class="k-invalid-msg" data-for="pass" style="float:left;"></div>
+                    <div id="passMeterContainer" style="float:left;"></div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="confirmPass" class="control-label col-sm-3 col-xs-10" translate>PAGES.REGISTER.PASSWORD_CONFIRM.TITLE</label>
+                <div class="label-content col-sm-4 col-xs-10">
+                    <input id="confirmPass"
+                           name="confirmPass"
+                           autocomplete="off" class="form-control" type="password"
+                           ng-model="data.confirmPass"
+                           placeholder="{{'PAGES.REGISTER.PASSWORD_CONFIRM.PLACEHOLDER' | translate}}"
+                           required
+                           validationmessage="{{'PAGES.REGISTER.PASSWORD_CONFIRM.REQUIRED' | translate}}" />
+                </div>
+                <div class="col-sm-4 col-xs-10">
+                    <div class="k-invalid-msg" data-for="confirmPass"></div>
+                </div>
+            </div>
+
+            <div class="margin-bottom-15">
+                <button class="k-button margin-right-10" ng-click="RegisterCtrl.Save(data)" translate>PAGES.REGISTER.BUTTONS.SAVE.TITLE</button>
+                <button class="k-button" ng-click="RegisterCtrl.Cancel()" translate>PAGES.REGISTER.BUTTONS.CANCEL.TITLE</button>
+            </div>
+        </form>
+    </div>
+</div>

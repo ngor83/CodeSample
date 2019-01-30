@@ -1,0 +1,65 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BBWT.Data", "BBWT.Data\BBWT.Data.csproj", "{6083A1FE-CBC2-4308-9756-8F9D7F172AFE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BBWT.Domain", "BBWT.Domain\BBWT.Domain.csproj", "{1B3F4F9A-B4D1-435B-9AAC-7F9174309502}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Testing", "Testing", "{0880EA25-6F25-4DC0-ABE4-6B8102BF9F70}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BBWT.FakeObjects", "BBWT.FakeObjects\BBWT.FakeObjects.csproj", "{0E6306F9-360E-492D-8DCF-99A86BA1BF6D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BBWT.UnitTests", "BBWT.UnitTests\BBWT.UnitTests.csproj", "{BD8FEEB4-A032-4CE7-8E51-E71B92426B48}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BBWT.Services", "BBWT.Services\BBWT.Services.csproj", "{9F914635-A850-4D0B-9CCC-8A6456D5F6DF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BBWT.Web", "BBWT.Web\BBWT.Web.csproj", "{063DB631-FCBD-4CEE-964E-2D23A13A2080}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BBWT.DTO", "BBWT.DTO\BBWT.DTO.csproj", "{06DFF84D-0BAA-45B6-BEEB-82C653ADB334}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6083A1FE-CBC2-4308-9756-8F9D7F172AFE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6083A1FE-CBC2-4308-9756-8F9D7F172AFE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6083A1FE-CBC2-4308-9756-8F9D7F172AFE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6083A1FE-CBC2-4308-9756-8F9D7F172AFE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1B3F4F9A-B4D1-435B-9AAC-7F9174309502}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1B3F4F9A-B4D1-435B-9AAC-7F9174309502}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1B3F4F9A-B4D1-435B-9AAC-7F9174309502}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1B3F4F9A-B4D1-435B-9AAC-7F9174309502}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0E6306F9-360E-492D-8DCF-99A86BA1BF6D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0E6306F9-360E-492D-8DCF-99A86BA1BF6D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0E6306F9-360E-492D-8DCF-99A86BA1BF6D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0E6306F9-360E-492D-8DCF-99A86BA1BF6D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BD8FEEB4-A032-4CE7-8E51-E71B92426B48}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BD8FEEB4-A032-4CE7-8E51-E71B92426B48}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BD8FEEB4-A032-4CE7-8E51-E71B92426B48}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BD8FEEB4-A032-4CE7-8E51-E71B92426B48}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9F914635-A850-4D0B-9CCC-8A6456D5F6DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9F914635-A850-4D0B-9CCC-8A6456D5F6DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9F914635-A850-4D0B-9CCC-8A6456D5F6DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9F914635-A850-4D0B-9CCC-8A6456D5F6DF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{063DB631-FCBD-4CEE-964E-2D23A13A2080}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{063DB631-FCBD-4CEE-964E-2D23A13A2080}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{063DB631-FCBD-4CEE-964E-2D23A13A2080}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{063DB631-FCBD-4CEE-964E-2D23A13A2080}.Release|Any CPU.Build.0 = Release|Any CPU
+		{06DFF84D-0BAA-45B6-BEEB-82C653ADB334}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{06DFF84D-0BAA-45B6-BEEB-82C653ADB334}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{06DFF84D-0BAA-45B6-BEEB-82C653ADB334}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{06DFF84D-0BAA-45B6-BEEB-82C653ADB334}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{0E6306F9-360E-492D-8DCF-99A86BA1BF6D} = {0880EA25-6F25-4DC0-ABE4-6B8102BF9F70}
+		{BD8FEEB4-A032-4CE7-8E51-E71B92426B48} = {0880EA25-6F25-4DC0-ABE4-6B8102BF9F70}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		EnterpriseLibraryConfigurationToolBinariesPath = packages\Unity.2.1.505.2\lib\NET35
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,5 @@
+﻿<div class="userprofile">
+    <div class="username" ng-show="User"></div><a style="text-decoration:none;" translate>{{User.FullName}}</a><div id="netStatusIndicator" style="display:inline-block" class="networkIndicator"></div><span class="netStatusText">{{NetworkStatusText}}</span>
+    <a href="/login" class="btn hidden-print k-button" ng-hide="User || IsOnlyADLogin" translate>PAGES.LOGIN.BUTTONS.SUBMIT.TITLE</a>
+    <button class="k-button hidden-print" ng-show="User && !IsOnlyADLogin" ng-click="Logout()" translate>PAGES.LOGIN.BUTTONS.LOGOUT.TITLE</button>
+</div>

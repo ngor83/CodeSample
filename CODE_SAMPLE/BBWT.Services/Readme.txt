@@ -1,0 +1,1 @@
+﻿This project is a storage for all business-logic classes

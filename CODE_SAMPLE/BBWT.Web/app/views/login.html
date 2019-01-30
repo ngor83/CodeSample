@@ -1,0 +1,90 @@
+﻿<div ng-show="IsOnlyADLogin">
+    <h1 translate>PAGES.USER_NOT_FOUND.TITLE</h1>
+    {{'PAGES.USER_NOT_FOUND.CONTENT' | translate}}
+</div>
+<div ng-show="!IsOnlyADLogin">
+    <div class="page-header">
+        <h1 translate>PAGES.LOGIN.TITLE</h1>
+        <p class="purpose" translate>PAGES.LOGIN.DESCRIPTION</p>
+    </div>
+    <div ng-show="IsAuthError" class="margin-bottom-15">
+        <span class="text-danger">{{ AuthErrorMessage }}</span>
+    </div>
+    <iframe name="loginTarget" id="loginTarget" style="display:none"></iframe>
+    <form class="form-horizontal" method="post" name="loginForm" ng-submit="Login(data)" action="/Home/LoginCap" target="loginTarget">
+        <div class="form-group">
+            <label for="username" class="col-sm-2 control-label" translate>PAGES.LOGIN.USERNAME.TITLE</label>
+            <div class="label-content col-sm-4 col-lg-3">
+                <input name="username" autocomplete="off" class="form-control" type="text" ng-model="data.name" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="pass" class="col-sm-2 control-label" translate>PAGES.LOGIN.PASSWORD.TITLE</label>
+            <div class="label-content col-sm-4 col-lg-3">
+                <input name="pass" autocomplete="off" class="form-control" type="password" ng-model="data.pass" />
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-sm-5 col-lg-3 col-xs-12 col-sm-offset-2">
+                <label class="checkbox">
+                    <input name="remember" type="checkbox" ng-model="data.save" />
+                    {{'PAGES.LOGIN.KEEP_ME.TITLE' | translate}}
+                </label>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-sm-4 col-lg-3 col-sm-offset-2">
+                <button class="k-button col-xs-12" ng-disabled="IsLockOnRequest" type="submit" translate>PAGES.LOGIN.BUTTONS.SUBMIT.TITLE</button>
+            </div>
+        </div>
+        <!--<div class="form-group">
+            <div class="col-sm-6 col-lg-5 col-xs-12">
+                <div id="recover-password-content" translate translate-values="{recoverHandler: 'ShowRecoverPasswordDlg()'}">PAGES.LOGIN.RECOVER_PASSWORD.CONTENT</div>
+                <div id="register-content">
+                    <span translate translate-values="{registerUrl: '/register'}">PAGES.LOGIN.REGISTER.CONTENT</span>
+                    <span translate translate-values="{registerCompanyUrl: '/registercompany'}"
+                          ng-show="IsCompanyRegistrationAllowed">PAGES.LOGIN.REGISTER.CONTENT</span>
+                </div>
+
+            </div>
+        </div>-->
+        <!--<div class="form-group">
+            <div class="col-sm-6 col-lg-5 col-xs-12">
+                <h3 translate>PAGES.LOGIN.DEMO.TITLE</h3>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-sm-8 col-lg-5 col-xs-12">
+                <button class="k-button margin-left-bottom-15" ng-click="LoginAsAdmin()" ng-disabled="IsLockOnRequest" translate>PAGES.LOGIN.DEMO.BUTTONS.ADMIN.TITLE</button>                
+                <button class="k-button margin-left-bottom-15" ng-click="LoginAsEngineer()" ng-disabled="IsLockOnRequest" translate>PAGES.LOGIN.DEMO.BUTTONS.ENGINEER.TITLE</button>
+                <button class="k-button margin-left-bottom-15" ng-click="LoginAsDesigner()" ng-disabled="IsLockOnRequest" translate>PAGES.LOGIN.DEMO.BUTTONS.DESIGNER.TITLE</button>
+                <button class="k-button margin-left-bottom-15" ng-click="LoginAsSiteManager()" ng-disabled="IsLockOnRequest" translate>PAGES.LOGIN.DEMO.BUTTONS.SITEMANAGER.TITLE</button>
+            </div>
+        </div>-->
+
+    </form>
+
+    <!--<div style="display: none;" id="dlgRecoverPassword">
+        <div class="popup-content">
+            <div class="">
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <p class="margin-left-15 margin-right-15" translate>PAGES.RECOVER_PASSWORD.PURPOSE</p>
+                    </div>
+                    <div class="form-group">
+                        <label for="username" class="col-sm-4 control-label" translate>PAGES.RECOVER_PASSWORD.EMAIL.TITLE</label>
+                        <div class="col-sm-6">
+                            <input name="username" class="form-control" type="text" ng-model="RecoveryData.Email" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="popup-footer">
+            <div class="col-sm-5 col-sm-offset-3">
+                <button class="k-button col-sm-5 pull-left" ng-click="SendResetLink()" translate>PAGES.RECOVER_PASSWORD.BUTTONS.SEND.TITLE</button>
+                <button class="k-button btn-cancel col-sm-5 pull-right" translate>PAGES.RECOVER_PASSWORD.BUTTONS.CANCEL.TITLE</button>
+            </div>
+        </div>
+    </div>-->
+</div>
